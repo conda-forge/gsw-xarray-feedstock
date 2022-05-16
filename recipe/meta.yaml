@@ -11,13 +11,13 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --use-deprecated=out-of-tree-build
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
     - pip
-    - poetry-core
+    - poetry-core >=1.0.0
     - python >=3.8
   run:
     - gsw >=3.4.0
@@ -37,6 +37,7 @@ about:
   summary: Drop in wrapper for gsw which adds CF standard name and units attributes to xarray results
   license: BSD-3-Clause
   license_file: LICENSE.rst
+  dev_url: https://gsw-xarray.readthedocs.io/
 
 extra:
   recipe-maintainers:

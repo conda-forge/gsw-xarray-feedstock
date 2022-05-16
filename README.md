@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gsw-xarray-feed
 
 Summary: Drop in wrapper for gsw which adds CF standard name and units attributes to xarray results
 
+Development: https://gsw-xarray.readthedocs.io/
+
 Current build status
 ====================
 

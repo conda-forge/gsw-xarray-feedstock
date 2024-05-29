@@ -23,7 +23,7 @@ requirements:
     - gsw >=3.4.0
     - python >=3.9
     - xarray >=0.20.2
-    - cf-xarray >=0.7.4
+    - cf_xarray >=0.7.4
   run_constrained:
     - pint-xarray >=0.3
     - Pint >=0.20

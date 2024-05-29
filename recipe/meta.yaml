@@ -1,13 +1,13 @@
 {% set name = "gsw-xarray" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gsw-xarray-{{ version }}.tar.gz
-  sha256: f89c27a9f37549a1a6ed88a002201b880a8ae2463e711e74030e43101a62e185
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: aa389b0e237f9ce9b64bfe3e3c16a0367c750d0b54185d3c4817dd89951721ba
 
 build:
   noarch: python

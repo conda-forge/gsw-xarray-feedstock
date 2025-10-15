@@ -1,5 +1,6 @@
 {% set name = "gsw-xarray" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +8,26 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: aa389b0e237f9ce9b64bfe3e3c16a0367c750d0b54185d3c4817dd89951721ba
+  sha256: 75bb503731514a2621e97152bae09cf43ab3716728554be55af183568933ef84
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - pip
-    - poetry-core >=1.0.0
+    - hatchling >=1.27
     - python {{ python_min }}
   run:
-    - gsw >=3.4.0
+    - gsw >=3.6.20
     - python >={{ python_min }}
-    - xarray >=0.20.2
-    - cf_xarray <0.8.0,>=0.7.4
+    - xarray >=2023.09
+    - cf_xarray >=0.8
   run_constrained:
-    - pint-xarray <0.4,>=0.3
-    - Pint >=0.20
+    - pint-xarray >=0.6
+    - Pint >=0.24.4
 
 test:
   imports:
